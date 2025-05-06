@@ -1,0 +1,121 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+
+/* Import Tailwind */
+@import "tailwindcss";
+
+/* ======= Tailwind Theme Config (v4 CSS-first) ======= */
+@theme {
+  /* === Colors === */
+  --color-primary: hsl(12 88% 59%); /* Bright Red */
+  --color-dark-blue: hsl(228 39% 23%);
+  --color-dark-grayish-blue: hsl(227 12% 61%);
+  --color-very-dark-blue: hsl(233 12% 13%);
+  --color-very-pale-red: hsl(13 100% 96%);
+  --color-very-light-gray: hsl(0 0% 98%);
+
+  /* === Fonts === */
+  --font-sans: 'Be Vietnam Pro', sans-serif;
+
+  /* === Breakpoints (auto-sync with Tailwind theme) === */
+  --screen-sm: theme(screens.sm);
+  --screen-md: theme(screens.md);
+  --screen-lg: theme(screens.lg);
+  --screen-xl: theme(screens.xl);
+  --screen-2xl: theme(screens.2xl);
+
+  /* === Spacing === */
+  --container-padding: 1.25rem;    /* 20px ~ px-5 */
+  --container-padding-md: 4rem;    /* 64px ~ px-16 */
+
+  /* === Border radius === */
+  --rounded-default: 0.5rem;
+}
+
+/* ======= Global Styles ======= */
+
+/* Body / HTML */
+html, body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Typography */
+p {
+  @apply text-[1.2rem] text-gray-700 leading-8;
+  color: var(--color-dark-grayish-blue)
+}
+/* .custom-bg{
+  background-image: url('/src/assets/images/bg-tablet-pattern.svg');
+  @apply bg-contain bg-no-repeat bg-right-bottom;
+} */
+h1 {
+  @apply text-4xl font-bold leading-14;
+  color: var(--color-dark-blue)
+}
+
+h2 {
+  @apply text-3xl font-semibold leading-snug;
+  color: var(--color-dark-blue)
+}
+
+h3 {
+  @apply text-[1.1rem] font-bold leading-snug;
+  color: var(--color-dark-blue)
+}
+
+/* Responsive Typography */
+@media (min-width: var(--screen-md)) {
+  p {
+    @apply text-[1rem] leading-8;
+  }
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+}
+
+/* Container Padding Utility */
+.container-padding {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+
+  @media (min-width: var(--screen-md)) {
+    padding-left: var(--container-padding-md);
+    padding-right: var(--container-padding-md);
+  }
+}
+
+.section-spacing {
+  padding-top: 1rem;   /* 32px */
+  padding-bottom: 1rem;
+
+  @media (min-width: 768px) {
+    padding-top: 4rem; 
+    padding-bottom: 4rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding-top: 6rem;  
+    padding-bottom: 6rem;
+  }
+}
+
+
+.test-border {
+  border: 2px solid red;
+}
+.swiper-pagination-bullet {
+  background-color: white !important;
+  width: 13px !important;
+  height: 13px !important;
+  border: 2px solid var(--color-primary) !important;
+  /* opacity: 1; */
+  margin: 0 6px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-primary) !important;
+}

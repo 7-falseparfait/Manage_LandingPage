@@ -1,11 +1,12 @@
 import hambugerIcon from "./assets/images/icon-hamburger.svg";
 import closeIcon from "./assets/images/icon-close.svg";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "./assets/images/logo.svg";
 export function Header({ isOpen, setIsOpen }) {
   const menuLinks = ["Pricing", "Products", "About Us", "Careers", "Community"];
   return (
     <header className="flex justify-between container-padding py-6 relative">
-      <img src="/src/assets/images/logo.svg" alt="" />
+      <img src={logo} alt="" />
       <button onClick={() => setIsOpen(!isOpen)} className="z-20">
         {" "}
         {isOpen ? (

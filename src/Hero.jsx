@@ -6,7 +6,7 @@ export function Hero({ isOpen }) {
   return (
     <section className="min-h-screen container-padding section-spacing relative lg:flex flex-row-reverse lg:justify-between">
       <img
-        className="absolute top-[-10rem] right-[-5rem] z-[-1] lg:top-[-15rem] lg:right-[-6rem]"
+        className="absolute top-[-10rem] right-[-5rem] z-[-1] lg:top-[-15rem] lg:right-[-3rem]"
         src={tabletPattern}
         alt=""
         srcset=""

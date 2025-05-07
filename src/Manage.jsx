@@ -12,7 +12,7 @@ export function Manage() {
           teams.
         </p>
         <img
-          className="absolute left-[-25rem] top-[9rem] z-[-1]"
+          className=" hidden lg:absolute lg:block left-[-25rem] top-[9rem] z-[-1]"
           src={tabletPattern}
           alt=""
         />

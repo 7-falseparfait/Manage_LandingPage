@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import anishaImg from "./assets/images/avatar-anisha.png";
 import aliImg from "./assets/images/avatar-ali.png";
 import richardImg from "./assets/images/avatar-richard.png";
@@ -28,17 +28,49 @@ export function Slides() {
       name: "  Shanai Gough",
     },
   ];
+
   return (
-    <section className=" mt-2 container-padding py-9">
+    <section className="mt-2 px-5 md:px-0 py-9">
       <h2 className="text-center">What they've said</h2>
       <Swiper
-        modules={[Pagination]}
-        pagination={{ clickable: true }}
-        spaceBetween={20}
+        className="w-full !p-0 !m-0"
+        modules={[Autoplay, Pagination]}
+        loop={true}
+        grabCursor={true}
+        spaceBetween={30}
         slidesPerView={1}
+        speed={600}
+        pagination={{
+          clickable: true,
+          dynamicBullets: true,
+        }}
+        breakpoints={{
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            speed: 3000,
+            autoplay: {
+              delay: 0,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+            },
+          },
+        }}
+        onBreakpoint={(swiper) => {
+          if (window.innerWidth >= 1024) {
+            swiper.pagination.disable();
+            swiper.autoplay.start();
+          } else {
+            swiper.pagination.enable();
+            swiper.autoplay.stop();
+          }
+        }}
       >
         {testimonies.map((item, i) => (
-          <SwiperSlide key={i}>
+          <SwiperSlide
+            key={i}
+            className="bg-very-light-gray rounded-sm lg:mt-[5rem] lg:px-4 px-4"
+          >
             <div className="text-center flex flex-col gap-6 mt-14 pb-16">
               <div className="flex justify-center items-center-safe">
                 <img className="w-[7rem]" src={item.img} alt="" />
@@ -49,7 +81,7 @@ export function Slides() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="text-center mt-6">
+      <div className="text-center mt-6 lg:mt-12">
         <Button>Get Started</Button>
       </div>
     </section>

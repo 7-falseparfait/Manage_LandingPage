@@ -114,3 +114,9 @@ h3 {
 .swiper-pagination-bullet-active {
   background-color: var(--color-primary) !important;
 }
+header a:hover{
+  color: grey;
+}
+footer a:hover{
+  color: var(--color-primary);
+}

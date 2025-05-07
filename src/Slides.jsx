@@ -72,7 +72,7 @@ export function Slides() {
             key={i}
             className="bg-very-light-gray rounded-sm lg:mt-[5rem] mt-[1.5rem] lg:px-4 px-4 flex flex-col h-full "
           >
-            <div className="text-center flex flex-col gap-6 flex-grow  pb-16 lg:min-h-[22rem] lg:pb:0">
+            <div className="text-center flex flex-col gap-6 flex-grow  pb-16 lg:min-h-[22rem] pt-4 lg:pb:0">
               <div className="flex justify-center items-center-safe">
                 <img className="w-[7rem]" src={item.img} alt="" />
               </div>

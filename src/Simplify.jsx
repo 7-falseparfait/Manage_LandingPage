@@ -2,12 +2,12 @@ import { Button } from "./Button";
 
 export function Simplify() {
   return (
-    <section className="bg-primary text-center py-40 container-padding relative overflow-y-hidden lg:flex lg:justify-between lg:overflow-x-hidden">
-      <h1 className="!text-white lg:w-[45%] lg:text-left z-10">
+    <section className="bg-primary text-center py-40 lg:py-24 container-padding relative overflow-y-hidden lg:flex lg:justify-between lg:overflow-x-hidden">
+      <h1 className="!text-white lg:w-[45%] lg:text-left relative z-50">
         Simplify how your team works today.
       </h1>
       <svg
-        className="absolute top-[2rem] left-[-43rem] z-[2] lg:hidden"
+        className="absolute top-[2rem] left-[-43rem] z-[1] lg:hidden"
         xmlns="http://www.w3.org/2000/svg"
         width="814"
         height="814"

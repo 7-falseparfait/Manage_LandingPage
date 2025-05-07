@@ -31,9 +31,10 @@ export function Slides() {
 
   return (
     <section className="mt-2 px-5 md:px-0 py-9">
-      <h2 className="text-center">What they've said</h2>
+      <h2 className="text-center ">What they've said</h2>
       <Swiper
-        className="w-full !p-0 !m-0"
+        autoHeight={false}
+        className="w-full !p-0 !m-0 flex"
         modules={[Autoplay, Pagination]}
         loop={true}
         grabCursor={true}
@@ -69,9 +70,9 @@ export function Slides() {
         {testimonies.map((item, i) => (
           <SwiperSlide
             key={i}
-            className="bg-very-light-gray rounded-sm lg:mt-[5rem] lg:px-4 px-4"
+            className="bg-very-light-gray rounded-sm lg:mt-[5rem] mt-[1.5rem] lg:px-4 px-4 flex flex-col h-full "
           >
-            <div className="text-center flex flex-col gap-6 mt-14 pb-16">
+            <div className="text-center flex flex-col gap-6 flex-grow  pb-16 lg:min-h-[22rem] lg:pb:0">
               <div className="flex justify-center items-center-safe">
                 <img className="w-[7rem]" src={item.img} alt="" />
               </div>

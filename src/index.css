@@ -42,26 +42,27 @@ html, body {
 
 /* Typography */
 p {
-  @apply text-[1.2rem] text-gray-700 leading-8;
-  color: var(--color-dark-grayish-blue)
+  @apply text-base text-gray-700 leading-8; /* Base: ~1rem (16px) */
+  @apply lg:text-[1.3rem]; /* lg: ~1.2rem */
+  color: var(--color-dark-grayish-blue);
 }
-/* .custom-bg{
-  background-image: url('/src/assets/images/bg-tablet-pattern.svg');
-  @apply bg-contain bg-no-repeat bg-right-bottom;
-} */
+
 h1 {
-  @apply text-4xl font-bold leading-14;
-  color: var(--color-dark-blue)
+  @apply text-3xl font-bold leading-tight; /* Base: ~1.875rem (30px) */
+  @apply lg:text-6xl lg:leading-[5rem]; /* lg: ~2.25rem (36px) */
+  color: var(--color-dark-blue);
 }
 
 h2 {
-  @apply text-3xl font-semibold leading-snug;
-  color: var(--color-dark-blue)
+  @apply text-2xl font-semibold leading-snug; /* Base: ~1.5rem (24px) */
+  @apply lg:text-4xl; /* lg: ~1.875rem (30px) */
+  color: var(--color-dark-blue);
 }
 
 h3 {
-  @apply text-[1.1rem] font-bold leading-snug;
-  color: var(--color-dark-blue)
+  @apply text-base font-bold leading-snug; /* Base: 1rem (16px) */
+  @apply lg:text-[1.1rem]; /* lg: ~1.1rem */
+  color: var(--color-dark-blue);
 }
 
 /* Responsive Typography */

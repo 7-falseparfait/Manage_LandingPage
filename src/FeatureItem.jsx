@@ -1,6 +1,8 @@
-export function FeatureItem({ number, text }) {
+export function FeatureItem({ number, text, className = "" }) {
   return (
-    <div className="flex items-center bg-very-pale-red rounded-lg">
+    <div
+      className={`flex items-center bg-very-pale-red rounded-lg ${className}`}
+    >
       <div className="bg-primary text-white rounded-full px-7 py-2 font-bold">
         {number.toString().padStart(2, "0")}
       </div>

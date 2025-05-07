@@ -80,7 +80,7 @@ h3 {
 
 /* Container Padding Utility */
 .container-padding {
-  @apply px-5 md:px-16;
+  @apply px-5 lg:px-16;
 }
 
 .section-spacing {

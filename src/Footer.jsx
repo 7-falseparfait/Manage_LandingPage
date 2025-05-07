@@ -24,7 +24,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="container-padding py-10 bg-very-dark-blue">
+    <footer className=" container-padding py-10 bg-very-dark-blue">
       <div className="lg:hidden">
         <div className="flex gap-5">
           <input
